@@ -1,0 +1,2 @@
+class NoAlcanzaMinimoDeHijosError < RuntimeError
+end

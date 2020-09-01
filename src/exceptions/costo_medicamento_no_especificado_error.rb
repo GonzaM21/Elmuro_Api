@@ -1,0 +1,2 @@
+class CostoNoEspecificadoError < RuntimeError
+end

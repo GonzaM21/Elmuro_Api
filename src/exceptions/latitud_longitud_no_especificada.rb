@@ -1,0 +1,2 @@
+class LatitudLongitudNoEspecificada < RuntimeError
+end

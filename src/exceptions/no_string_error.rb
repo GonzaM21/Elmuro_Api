@@ -1,0 +1,2 @@
+class NoStringError < RuntimeError
+end

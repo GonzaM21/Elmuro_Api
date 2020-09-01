@@ -1,0 +1,39 @@
+image: ruby:2.5.7
+services:
+  - postgres:9.5
+variables:
+  POSTGRES_DB: health_api_test
+  POSTGRES_USER: health_api
+  POSTGRES_PASSWORD: health_api
+  DB_HOST: postgres
+stages:
+  - build
+  - deploy_staging
+  - deploy_production
+
+job_build:
+  stage: build
+  script:
+    - apt-get update -qq && apt-get install -y -qq postgresql postgresql-contrib libpq-dev cmake
+    - ruby -v
+    - which ruby
+    - gem install bundler --no-document
+    - bundle install --without staging production
+    - RACK_ENV=test bundle exec rake
+
+job_deploy_staging:
+   stage: deploy_staging
+   script:
+   - gem install dpl
+   - dpl --provider=heroku --app=elmuro-api-staging-env --api-key=cd8b5b8b-469b-490d-8757-4988496bb687
+   only:
+   - staging
+
+job_deploy_production:
+   stage: deploy_production
+   script:
+   - gem install dpl
+   - dpl --provider=heroku --app=elmuro-api-prod --api-key=cd8b5b8b-469b-490d-8757-4988496bb687
+   only:
+   - master
+

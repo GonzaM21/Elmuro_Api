@@ -1,0 +1,2 @@
+class PrestacionInexistenteCentroError < RuntimeError
+end

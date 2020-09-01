@@ -1,0 +1,2 @@
+class PlanRepetidoError < RuntimeError
+end

@@ -1,0 +1,2 @@
+class NoAlcanzaEdadMinimaError < RuntimeError
+end

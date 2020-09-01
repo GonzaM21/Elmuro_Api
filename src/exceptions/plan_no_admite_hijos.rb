@@ -1,0 +1,2 @@
+class PlanNoAdmiteHijosError < RuntimeError
+end

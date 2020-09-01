@@ -1,0 +1,2 @@
+class NombreVacioError < RuntimeError
+end

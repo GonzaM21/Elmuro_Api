@@ -1,0 +1,2 @@
+class NoAfiliadoError < RuntimeError
+end

@@ -1,0 +1,2 @@
+class CostoMedicamentoNegativoError < RuntimeError
+end

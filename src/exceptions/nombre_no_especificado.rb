@@ -1,0 +1,2 @@
+class NombreNoEspecificado < RuntimeError
+end

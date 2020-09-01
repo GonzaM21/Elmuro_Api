@@ -1,0 +1,2 @@
+class PlanNoExiste < RuntimeError
+end

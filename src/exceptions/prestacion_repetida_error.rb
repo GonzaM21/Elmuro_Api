@@ -1,0 +1,2 @@
+class PrestacionRepetidaError < RuntimeError
+end

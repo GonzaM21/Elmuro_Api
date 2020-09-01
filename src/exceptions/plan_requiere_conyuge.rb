@@ -1,0 +1,2 @@
+class PlanRequiereConyugeError < RuntimeError
+end

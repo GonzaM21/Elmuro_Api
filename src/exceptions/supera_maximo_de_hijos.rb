@@ -1,0 +1,2 @@
+class SuperaMaximoDeHijosError < RuntimeError
+end
